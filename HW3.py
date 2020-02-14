@@ -7,7 +7,7 @@ def div_func():
     except ZeroDivisionError:
         return "На 0 деление запрещенно!!!"
     return div
-print("%.2f"%div_func())
+print(div_func())
 
 #Задание 2.
 def info(**kwargs):
@@ -42,6 +42,24 @@ print(my_func())
 def my_func(x,y):
     return pow(x,y)
 print(my_func(2,-2))
+
+#задание 5.
+def sum():
+    sum_res = 0
+    ex = False
+    while ex == False:
+        number = input('Введите число или Q, чтобы выйти: ').split()
+        res = 0
+        for el in range(len(number)):
+            if number[el] == 'q' or number[el] == 'Q':
+                ex = True
+                break
+            else:
+                res = res + int(number[el])
+        sum_res = sum_res + res
+        print(f'Сумма: {sum_res}')
+sum()
+
 
 #Задание 6.
 def int_func(*args):
